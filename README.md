@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+# React Component Library for Classmates
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A collection of simple, well-documented React components to help you learn React or use in your capstone projects. Each component demonstrates fundamental React concepts with clear explanations.
+
+## Quick Start
+
+### Prerequisites
+- Node.js installed on your computer
+- Basic knowledge of JavaScript
+
+### Clone and Run
+```bash
+# Clone the repository
+git clone [your-repo-url]
+cd [repo-name]
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+```
+
+The app will open at [http://localhost:3000](http://localhost:3000)
+
+## What's Inside
+
+### Current Components
+
+**Dropdown Component**
+- Controlled form inputs
+- State management with `useState`
+- Event handling with `onChange`
+- Conditional rendering
+
+**Counter Component**
+- Multiple state variables
+- `useEffect` hook for side effects
+- `setInterval` and cleanup functions
+- Error handling and validation
+- Updater functions to avoid stale closures
+
+**Modal Component**
+- Conditional rendering with boolean state
+- Event propagation with `stopPropagation()`
+- Click-outside-to-close pattern
+- Portal-like overlay patterns
+
+### Coming Soon
+
+**API Fetch Component**
+- Data fetching with `fetch()` or `axios`
+- Loading states
+- Error handling
+- Working with external APIs
+
+**Lucide Icons Component**
+- Integrating third-party icon libraries
+- Using Lucide React icons
+- Icon sizing and styling
+
+## Key React Concepts Covered
+
+- **useState** - Managing component state
+- **useEffect** - Side effects, cleanup, and dependency arrays
+- **Conditional Rendering** - Showing/hiding elements based on state
+- **Event Handling** - onClick, onChange, and other events
+- **Props** - Passing data between components
+- **Component Composition** - Building complex UIs from simple components
+
+## Project Structure
+```
+src/
+├── App.js              # Main app with routing
+├── App.css             # Global styles (dark mode theme)
+├── components/         # Reusable components
+│   ├── Navbar.js
+│   ├── Dropdown.js
+│   ├── Counter.js
+│   └── Modal.js
+└── pages/              # Page components
+```
+
+## Using Components in Your Project
+
+Each component is self-contained and can be copied into your own project. Simply:
+
+1. Copy the component file
+2. Copy the relevant CSS styles
+3. Import and use in your app
+
+Example:
+```jsx
+import Dropdown from './components/Dropdown';
+
+function App() {
+  return ;
+}
+```
+
+## Styling
+
+This project uses a modern dark mode theme with:
+- Custom CSS (no framework required)
+- Flexbox layouts
+- Smooth transitions and hover effects
+- Responsive design
+
+Feel free to modify `App.css` to match your project's theme!
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
 
 ### `npm run build`
+Builds the app for production in the `build` folder
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm test`
+Runs tests (if configured)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Need Help?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Check the comments in each component file
+- Read the explanation paragraphs in the UI
+- Ask in class or reach out!
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Found a bug or want to add a component? Feel free to contribute or suggest improvements!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with ❤️ for classmates preparing for capstone projects

@@ -1,38 +1,225 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  color: #e0e0e0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #0f0f0f;
+  color: #e0e0e0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.card {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid #2a2a2a;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+select:focus {
+  outline: none;
+  border-color: #6b9bd1;
+  box-shadow: 0 0 0 2px rgba(107, 155, 209, 0.2);
+}
+
+button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #6b9bd1 0%, #4a7ab8 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(107, 155, 209, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+span {
+  font-size: 0.7rem;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #1e2a35;
+  border-left: 4px solid #6b9bd1;
+  display: block;
+  border-radius: 4px;
+}
+
+nav ul li {
+  font-size: 0.5rem;
+  display: inline-block;
+  margin: 0.1rem;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  transition: background-color 0.2s;
+}
+
+nav ul li:hover {
+  background-color: #3a3a3a;
+}
+
+.navLink {
+  font-size: 1rem;
+  color: #b0b0b0;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #6b9bd1;
+}
+
+.explainer {
+  line-height: 1.6;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #1e2a35;
+  border-left: 4px solid #6b9bd1;
+  color: #b0b0b0;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.counter {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 15px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.counterContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.counterBtns {
+  display: inline-block;
+}
+
+option {
+  font-size: .7rem;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+/* Modal styles */
+
+.modal-container{
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
 }
 
-@keyframes App-logo-spin {
+.modal-content {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid #2a2a2a;
+  position: relative;
+  animation: modalSlideIn 0.2s ease-out;
+}
+
+@keyframes modalSlideIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  color: #b0b0b0;
+}
+
+.modal-content button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  background: #2a2a2a;
+}
+
+.modal-content button:hover {
+  background: #3a3a3a;
+  transform: none;
+  box-shadow: none;
 }
