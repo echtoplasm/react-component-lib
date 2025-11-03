@@ -25,6 +25,11 @@ const Navbar = () => {
               API Fetch
             </Link>
           </li>
+          <li>
+            <Link className="navLink" to="/lucide">
+              Lucide
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
