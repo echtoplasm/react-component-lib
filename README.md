@@ -11,8 +11,8 @@ A collection of simple, well-documented React components to help you learn React
 ### Clone and Run
 ```bash
 # Clone the repository
-git clone [your-repo-url]
-cd [repo-name]
+git clone https://github.com/echtoplasm/react-component-lib
+cd rpractice
 
 # Install dependencies
 npm install
@@ -123,7 +123,7 @@ Runs tests (if configured)
 
 - Check the comments in each component file
 - Read the explanation paragraphs in the UI
-- Ask in class or reach out!
+
 
 ## Contributing
 
