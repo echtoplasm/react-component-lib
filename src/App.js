@@ -7,6 +7,7 @@ import DropdownPage from './pages/Dropdown';
 import ApiPage from './pages/Api';
 import ModalPage from './pages/Modal';
 import LucidePage from './pages/Lucide';
+import StopwatchPage from './pages/StopwatchPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/apipage" element={<ApiPage />} />
         <Route path="/modalpage" element={<ModalPage />} />
         <Route path="/lucide" element={<LucidePage />} />
+        <Route path="/stopwatchpage" element={<StopwatchPage />} />
       </Routes>
     </BrowserRouter>
   );
