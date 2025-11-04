@@ -4,7 +4,7 @@ import Dropdown from '../components/Dropdown';
 const DropDownPage = () => {
   return (
     <div className='card'>
-      <h1>Hello I am the dropdown component</h1>
+      <h1 className='compTitle'>Dropdown Component</h1>
       <Dropdown />
     </div>
   );

@@ -18,7 +18,7 @@ const ModalComponent = () => {
   const handleCloseModal = () => setShowModal(false);
 
   return (
-    <div className="card">
+    <div>
       <p className="explainer">
         This component demonstrates modal dialogs in React. Clicking the button toggles the
         `showModal` state, which conditionally renders the Modal component. The modal uses a dark

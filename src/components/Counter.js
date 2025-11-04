@@ -33,7 +33,7 @@ const Counter = () => {
   };
 
   return (
-    <>
+    <div>
       <p className="explainer">
         This component demonstrates multiple React concepts: state management with useState, side
         effects with useEffect, and conditional rendering. The first counter (count) is controlled
@@ -52,7 +52,7 @@ const Counter = () => {
         </div>
       </div>
       <p className="counter">Counter 2 on interval: {counter2}</p>
-    </>
+    </div>
   );
 };
 

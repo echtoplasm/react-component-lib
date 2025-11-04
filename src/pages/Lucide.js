@@ -4,10 +4,10 @@ import LucideComponent from "../components/Lucide";
 
 const LucidePage = () => {
   return (
-  <>
-    <h1>Lucide Component</h1>
+  <div>
+      <h1 className="compTitle">Lucide Component</h1>
       <LucideComponent />
-  </>
+  </div>
   )
 }
 

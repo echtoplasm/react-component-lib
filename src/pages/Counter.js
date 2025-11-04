@@ -3,10 +3,8 @@ import Counter from '../components/Counter';
 const CounterPage = () => {
   return (
     <div className='card'>
-      <h1>Hello This is a counter component</h1>
-      <div className='card'>  
+      <h1 className='compTitle'>Counter Component</h1>
       <Counter />
-      </div>
     </div>
   );
 };

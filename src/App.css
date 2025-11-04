@@ -153,6 +153,12 @@ option {
   color: #e0e0e0;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Modal styles */
 
 .modal-container{

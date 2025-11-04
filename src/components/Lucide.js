@@ -3,7 +3,8 @@ import { LucideComputer, HandHeart, WandSparkles } from 'lucide-react';
 
 const LucideComponent = () => {
   return (
-    <div className="card">
+    <div>
+      <h1>Lucide Component</h1>
       <p className='explainer'>
         Lucide is a community-maintained icon library offering over 1,400 clean, consistent SVG
         icons. It's designed to be lightweight and tree-shakeable, meaning you only import the icons
