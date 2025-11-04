@@ -3,11 +3,16 @@ import { useState, useEffect } from 'react';
 
 const ApiComponent = () => {
   const [todo, setTodo] = useState();
+  const [id, setId] = useState(1);
+
+  const increaseId = () => {
+    setId(prevId => prevId + 1);
+  };
 
   useEffect(() => {
     const fetchTodo = async () => {
       try {
-        const jsonResponse = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+        const jsonResponse = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
         const data = await jsonResponse.json();
         setTodo(data);
       } catch (error) {
@@ -15,11 +20,17 @@ const ApiComponent = () => {
       }
     };
     fetchTodo();
-  }, []);
+  }, [id]);
 
   return (
     <>
-      <p>Fetch API description</p>
+      <p className='explainer'>
+        The Fetch API is a modern JavaScript interface for making HTTP requests. It returns
+        Promises, making it perfect for async/await syntax. Unlike the older XMLHttpRequest, Fetch
+        is cleaner and more powerful, letting you easily GET data from APIs, POST form submissions,
+        or handle any HTTP method. It's built into all modern browsers and works seamlessly with
+        JSON, making it the standard way to communicate with servers in web applications.
+      </p>
       <div className="card">
         {todo ? (
           <>
@@ -29,6 +40,7 @@ const ApiComponent = () => {
         ) : (
           <p>Loading...</p>
         )}
+        <button onClick={increaseId}>Fetch new todo</button>
       </div>
     </>
   );

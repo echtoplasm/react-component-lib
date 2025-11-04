@@ -6,7 +6,7 @@ const Dropdown = () => {
 
   return (
     <>
-      <p>
+      <p className='explainer'>
         This component demonstrates controlled form inputs in React. The select
         dropdown's value is stored in state using useState. When the user
         selects an option, the onChange event fires and updates the state with
