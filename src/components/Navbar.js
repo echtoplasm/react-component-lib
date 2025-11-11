@@ -1,43 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import FundDropDown from './FundDropDown';
+import AdvancedDropdown from './NavDropDown';
 const Navbar = () => {
   return (
-    <div className="card">
-      <nav className="navbar">
-        <ul>
-          <li>
-            <Link className="navLink" to="/">
-              Counter
-            </Link>
-          </li>
-          <li>
-            <Link className="navLink" to="/dropdownpage">
-              Dropdown
-            </Link>
-          </li>
-          <li>
-            <Link className="navLink" to="/modalpage">
-              Modal
-            </Link>
-          </li>
-          <li>
-            <Link className="navLink" to="/apipage">
-              API Fetch
-            </Link>
-          </li>
-          <li>
-            <Link className="navLink" to="/lucide">
-              Lucide
-            </Link>
-          </li>
-          <li>
-            <Link className="navLink" to="/stopwatchpage">
-              StopWatch
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav className="navbar">
+      <div className="card">
+        <div className="dropdown-container">
+          <FundDropDown />
+          <AdvancedDropdown />
+        </div>
+      </div>
+    </nav>
   );
 };
 

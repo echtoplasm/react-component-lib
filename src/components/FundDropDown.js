@@ -1,0 +1,53 @@
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+/** @type  */
+const FundDropDown = () => {
+  const navigate = useNavigate();
+  const handleChange = (event) => {
+    const route = event.target.value;
+    if(route){
+      navigate(route);
+    }
+  }
+  return (
+    <div className='container'>
+      <label>Fundamentals</label>
+      <select className="navDropDown" onChange={handleChange}>
+        <ul>
+          <option value="/">
+            <Link className="navLink" to="/">
+              Counter
+            </Link>
+          </option>
+          <option value="/dropdownpage">
+            <Link className="navLink" to="/dropdownpage">
+              Dropdown
+            </Link>
+          </option>
+          <option value="/modalpage">
+            <Link className="navLink" to="/modalpage">
+              Modal
+            </Link>
+          </option>
+          <option value="/apipage">
+            <Link className="navLink" to="/apipage">
+              API Fetch
+            </Link>
+          </option>
+          <option value="/lucide">
+            <Link className="navLink" to="/lucide">
+              Lucide
+            </Link>
+          </option>
+          <option value="/stopwatchpage">
+            <Link className="navLink" to="/stopwatchpage">
+              StopWatch
+            </Link>
+          </option>
+        </ul>
+      </select>
+    </div>
+  );
+};
+
+export default FundDropDown;

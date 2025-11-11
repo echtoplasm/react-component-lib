@@ -10,7 +10,7 @@ h1 {
   color: #e0e0e0;
 }
 
-.compTitle{
+.compTitle {
   margin-bottom: 8px;
 }
 
@@ -98,7 +98,27 @@ span {
   border-radius: 4px;
 }
 
-nav ul li {
+label {
+  font-size: 1rem;
+}
+
+nav {
+  display: flex;
+}
+
+nav .card {
+  flex-direction: colum;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dropdown-container {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center; /* Vertically aligns the dropdowns */
+}
+
+nav select {
   font-size: 0.5rem;
   display: inline-block;
   margin: 0.1rem;
@@ -108,7 +128,7 @@ nav ul li {
   transition: background-color 0.2s;
 }
 
-nav ul li:hover {
+nav select:hover {
   background-color: #3a3a3a;
 }
 
@@ -152,7 +172,7 @@ nav ul li:hover {
 }
 
 option {
-  font-size: .7rem;
+  font-size: 0.7rem;
   background-color: #2a2a2a;
   color: #e0e0e0;
 }
@@ -166,7 +186,7 @@ option {
 
 /* Modal styles */
 
-.modal-container{
+.modal-container {
   display: flex;
   align-items: center;
   justify-content: center;
