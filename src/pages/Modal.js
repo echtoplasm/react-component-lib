@@ -1,5 +1,5 @@
 import React from 'react';
-import ModalComponent from '../components/Modal';
+import ModalComponent from '../components/fundamentals/Modal';
 const ModalPage = () => {
   return (
     <div className='card'>

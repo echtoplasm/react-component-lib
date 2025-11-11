@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import useNavRoute from '../hooks/useNavRoute';
+import useNavRoute from '../../hooks/useNavRoute';
 
 const FundDropDown = () => {
   const handleRoute = useNavRoute();

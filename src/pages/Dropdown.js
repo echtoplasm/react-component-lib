@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../components/Dropdown';
+import Dropdown from '../components/fundamentals/Dropdown';
 
 const DropDownPage = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/appSpecific/Navbar';
 import CounterPage from './pages/Counter';
 import DropdownPage from './pages/Dropdown';
 import ApiPage from './pages/Api';

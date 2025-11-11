@@ -1,5 +1,5 @@
 import React from 'react';
-import ApiComponent from '../components/ApiFetch';
+import ApiComponent from '../components/fundamentals/ApiFetch';
 const ApiPage = () => {
   return (
     <div className='card'>

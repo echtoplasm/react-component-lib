@@ -1,6 +1,6 @@
 import { LucideComputer } from "lucide-react";
 import React from "react";
-import LucideComponent from "../components/Lucide";
+import LucideComponent from "../components/fundamentals/Lucide";
 
 const LucidePage = () => {
   return (
