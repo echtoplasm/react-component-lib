@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useNavRoute from '../hooks/useNavRoute';
 const AdvancedDropdown = () => {
+  const gotoroute = useNavRoute();
   return (
     <div>
       <div className="container">
         <label>Advanced Section</label>
-        <select name="advanced">
+        <select name="advanced" onChange={gotoroute}>
           <option value="Phaser.js">
             <Link>Phaser.js</Link>
           </option>

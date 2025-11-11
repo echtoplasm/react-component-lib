@@ -1,19 +1,14 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-/** @type  */
+import useNavRoute from '../hooks/useNavRoute';
+
 const FundDropDown = () => {
-  const navigate = useNavigate();
-  const handleChange = (event) => {
-    const route = event.target.value;
-    if(route){
-      navigate(route);
-    }
-  }
+  const handleRoute = useNavRoute();
+
   return (
-    <div className='container'>
+    <div className="container">
       <label>Fundamentals</label>
-      <select className="navDropDown" onChange={handleChange}>
-        <ul>
+      <select className="navDropDown" onChange={handleRoute} defaultValue="">
           <option value="/">
             <Link className="navLink" to="/">
               Counter
@@ -44,7 +39,6 @@ const FundDropDown = () => {
               StopWatch
             </Link>
           </option>
-        </ul>
       </select>
     </div>
   );
